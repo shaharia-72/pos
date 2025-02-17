@@ -16,6 +16,9 @@ ALLOWED_HOSTS = [
     'pos-b63z.onrender.com',  # Add your Render domain
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://pos-b63z.onrender.com',  # Render domain
+]
 # Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
