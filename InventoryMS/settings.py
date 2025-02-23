@@ -28,6 +28,8 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
     'pos-b63z.onrender.com',  # Add your Render domain
+    'pos-b63z.onrender.com',  # Old Render domain
+    'pos-xap1.onrender.com',  # New Render domain (add this)
 ]
 
 CSRF_TRUSTED_ORIGINS = [
