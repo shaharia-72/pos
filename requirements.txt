@@ -1,18 +1,47 @@
+asgiref
+certifi
+charset-normalizer
+crispy-bootstrap5
+Django
+django-appconf
+django-autoslug
+django-crispy-forms
+django-extensions
+django-filter
+django-imagekit
+django-phonenumber-field
+django-tables2
+et_xmlfile
+gunicorn
+idna
+openpyxl
+packaging
+phonenumbers
+pilkit
+pillow
+requests
+sqlparse
+tablib
+tzdata
+urllib3
+whitenoise
 # Django Packages
-Django==5.1
-django-autoslug==1.9.9
-django-crispy-forms==2.3
-django-extensions==3.2.3
-django-filter==24.3
-django-imagekit==5.0.0
-django-phonenumber-field==8.0.0
-django-tables2==2.7.0
+Django
+django-autoslug
+django-crispy-forms
+django-extensions
+django-filter
+django-imagekit
+django-phonenumber-field
+django-tables2
 
 # Bootstrap Packages
-crispy-bootstrap5==2024.2
+crispy-bootstrap5
 
 # Utility Packages
-openpyxl==3.1.5
-phonenumbers==8.13.43
-requests==2.32.3
-tablib==3.6.1
+openpyxl
+phonenumbers
+requests
+tablib
+gunicorn
+dj_database_url

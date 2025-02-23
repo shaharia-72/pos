@@ -1,5 +1,19 @@
+
 import os
 from pathlib import Path
+import dj_database_url#-
+import dj_database_url#+
+#+
+BASE_DIR = Path(__file__).resolve().parent.parent#+
+#+
+DATABASES = {#+
+    'default': dj_database_url.config(#+
+        default=f'sqlite:///{BASE_DIR}/db.sqlite3'#+
+    )#+
+}#+
+
+
+DATABASES['default'] = dj_database_url.config(default=f'sqlite:///{BASE_DIR}/db.sqlite3')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -51,6 +65,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # Add WhiteNoise remove letter
 ]
 
 ROOT_URLCONF = 'InventoryMS.urls'
@@ -103,7 +119,9 @@ LOGOUT_URL = 'logout'
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
 MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'static/images'
+# MEDIA_ROOT = BASE_DIR / 'static/images'
+STATIC_ROOT = BASE_DIR / 'staticfiles'  # Add this line
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
